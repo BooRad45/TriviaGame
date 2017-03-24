@@ -21,4 +21,27 @@ timer(
       $( "#timer" ).replaceWith( "<h2>Time is up!<h2>" );
     }
 );
+
 };
+
+// $(document).ready(function(){
+///////////EVENT HANDLER TO CHECK RADIO BUTTON VALUES WHEN SUBMIT BUTTON HIT///////////////////
+
+// var userAnswers = $('.radio-inline input:radio:checked').val();
+//    console.log(userAnswers);
+
+
+
+
+//////////////SCAN FOR USER ANSWERS IN "WRONG" ARRAY////////////////////////////
+
+
+
+
+///////////APPEND RESULTS TO PAGE WHEN SUBMIT BUTTON IS HIT////////////////////////////////
+
+
+
+
+
+// };
