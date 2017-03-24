@@ -1,66 +1,24 @@
 window.onload = function() {
-  $("#start").on("click", stopwatch.start);
-};
+//taken from StackOverflow
+    function timer(time,update,complete) {
+    var start = new Date().getTime();
+    var interval = setInterval(function() {
+        var now = time-(new Date().getTime()-start);
+        if( now <= 0) {
+            clearInterval(interval);
+            complete();
+        }
+        else update(Math.floor(now/1000));
+    },100); // the smaller this number, the more accurate the timer will be
+}
 
-//  Variable that will hold our setInterval that runs the stopwatch
-var intervalId;
-
-// Our stopwatch object
-var stopwatch = {
-
-  time: 0,
-
-  reset: function() {
-
-    stopwatch.time = 0;
-    
-
-    // DONE: Change the "display" div to "00:00."
-    $("#display").html("00:00");
-
-  
-  },
-  start: function() {
-
-    // DONE: Use setInterval to start the count here.
-    intervalId = setInterval(stopwatch.count, 1000);
-  },
-  stop: function() {
-
-    // DONE: Use clearInterval to stop the count here.
-    clearInterval(intervalId);
-  },
-
-   
-  count: function() {
-
-    // DONE: increment time by 1, remember we cant use "this" here.
-    stopwatch.time++;
-
-    // DONE: Get the current time, pass that into the stopwatch.timeConverter function,
-    //       and save the result in a variable.
-    var converted = stopwatch.timeConverter(stopwatch.time);
-    console.log(converted);
-
-    // DONE: Use the variable we just created to show the converted time in the "display" div.
-    $("#display").html(converted);
-  },
-  timeConverter: function(t) {
-
-    var minutes = Math.floor(t / 60);
-    var seconds = t - (minutes * 60);
-
-    if (seconds < 10) {
-      seconds = "0" + seconds;
+timer(
+    180000, // milliseconds
+    function(timeleft) { // called every step to update the visible countdown
+        document.getElementById('timer').innerHTML = timeleft+" second(s)";
+    },
+    function() { // what to do after
+      $( "#timer" ).replaceWith( "<h2>Time is up!<h2>" );
     }
-
-    if (minutes === 0) {
-      minutes = "00";
-    }
-    else if (minutes < 10) {
-      minutes = "0" + minutes;
-    }
-
-    return minutes + ":" + seconds;
-  }
+);
 };
