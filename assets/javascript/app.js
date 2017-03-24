@@ -1,4 +1,9 @@
-window.onload = function() {
+$(document).ready(function() {
+
+var numberCorrect = 0;
+var numberWrong = 0;
+
+
 //taken from StackOverflow
     function timer(time,update,complete) {
     var start = new Date().getTime();
@@ -7,6 +12,7 @@ window.onload = function() {
         if( now <= 0) {
             clearInterval(interval);
             complete();
+            // call function that is used by submit button as well???How????
         }
         else update(Math.floor(now/1000));
     },100); // the smaller this number, the more accurate the timer will be
@@ -22,18 +28,45 @@ timer(
     }
 );
 
+
+
+////////////CONDITIONALS TO TEST FOR CORRECT AND INCORRECT ANSWERS ONCE TIMER IS DONE OR SUBMIT BUTTON IS HIT
+$("#submit").click(function(){ //on submit button click (how to check timer up?)
+
+if ($('input[name=heis]:checked').length > 0) {
+    numberCorrect++;}
+    else {
+      numberWrong++;
+    }
+
+    if ($('input[name=cerPals]:checked').length > 0) {
+    numberCorrect++; }
+    else {
+      numberWrong++;
+    }
+
+    if ($('input[name=bluesClue]:checked').length > 0) {
+    numberCorrect++; }
+    else {
+      numberWrong++;
+
+}
+    if ($('input[name=methyl]:checked').length > 0) {
+    numberCorrect++; }
+    else {
+      numberWrong++;
+
+}
+
+    if ($('input[name=grayMatter]:checked').length > 0) {
+    numberCorrect++; }
+    else {
+      numberWrong++;
+
+}
+
 };
 
-// $(document).ready(function(){
-///////////EVENT HANDLER TO CHECK RADIO BUTTON VALUES WHEN SUBMIT BUTTON HIT///////////////////
-
-// var userAnswers = $('.radio-inline input:radio:checked').val();
-//    console.log(userAnswers);
-
-
-
-
-//////////////SCAN FOR USER ANSWERS IN "WRONG" ARRAY////////////////////////////
 
 
 
