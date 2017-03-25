@@ -1,9 +1,16 @@
 $(document).ready(function() {
-    var userAnswer;
+
+    // var answerOne;
+    // var answerTwo;
+    // var answerThree;
+    // var answerFour;
+    // var answerFive;
+    var numberCorrect = 0;
+    var numberWrong = 0;
 
             $("#startGameButton").click(function() {
-                var numberCorrect = 0;
-                var numberWrong = 0;
+                // var numberCorrect = 0;
+                // var numberWrong = 0;
                 $("#startGameButton").remove();
                 $("#questions").show();
 
@@ -40,34 +47,157 @@ $(document).ready(function() {
      //EVENT HANDLER FOR SUBMIT BUTTON/////
                 
                   $("input[type='submit']").click(function(){
-                    var userAnswer = $("input[name='alter']:checked").val();
-                    console.log(userAnswer);
-                });
+                    var answerOne = $("input[name='alter']:checked").val(); //////1st Question 
+                    console.log(answerOne);
+                
 
-            //     if  (userAnswer === 1 ) {
-            //     numberCorrect++;
-            //     console.log(numberCorrect);
-            // }
-            //     else {
-            //       numberWrong++;
-            //     }
+                if  (answerOne === "1" ) { //Took me an hour to figure out this needed to be a string!
+                numberCorrect++;
+                console.log(numberCorrect);
+            }
+                else if (! $("input[name='alter']:checked") ) {
+                    numberWrong++;
+                    console.log(numberWrong)
+                }
+                else {
+                  numberWrong++;
+                  console.log(numberWrong);
+                }
 
-            //    var userAnswer = $("input[name='alter']:checked").val();
-            //             console.log(userAnswer);
 
-            //     if  (userAnswer === 1 ) {
-            //     numberCorrect++;
-            //     console.log(numberCorrect);
-            // }
-            //     else {
-            //       numberWrong++;
-            //     }
 
-           
+                var answerTwo = $("input[name='son']:checked").val(); ///////////////2nd Question
+                    console.log(answerTwo);
+                
+
+                if  (answerTwo === "1" ) { //Took me an hour to figure out this needed to be a string!
+                numberCorrect++;
+                console.log(numberCorrect);
+            }
+                else if (! $("input[name='son']:checked") ) {
+                    numberWrong++;
+                    console.log(numberWrong)
+                }
+                else {
+                  numberWrong++;
+                  console.log(numberWrong);
+                }
+
+
+
+                var answerThree = $("input[name='nicknames']:checked").val(); ///////////////3rd Question
+                    console.log(answerThree);
+                
+
+                if  (answerThree === "1" ) { //Took me an hour to figure out this needed to be a string!
+                numberCorrect++;
+                console.log(numberCorrect);
+            }
+                else if (! $("input[name='nicknames']:checked") ) {
+                    numberWrong++;
+                    console.log(numberWrong)
+                }
+                else {
+                  numberWrong++;
+                  console.log(numberWrong);
+                }
+
+
+                var answerFour = $("input[name='key']:checked").val(); ///////////////4th Question
+                    console.log(answerFour);
+                
+
+                if  (answerFour === "1" ) { //Took me an hour to figure out this needed to be a string!
+                numberCorrect++;
+                console.log(numberCorrect);
+            }
+                else if (! $("input[name='key']:checked") ) {
+                    numberWrong++;
+                    console.log(numberWrong)
+                }
+                else {
+                  numberWrong++;
+                  console.log(numberWrong);
+                }
+
+                var answerFive = $("input[name='gray']:checked").val(); ///////////////5th Question
+                    console.log(answerFive);
+                
+
+                if  (answerFive === "1" ) { //Took me an hour to figure out this needed to be a string!
+                numberCorrect++;
+                console.log(numberCorrect);
+            }
+                else if (! $("input[name='gray']:checked") ) {
+                    numberWrong++;
+                    console.log(numberWrong)
+                }
+                else {
+                  numberWrong++;
+                  console.log(numberWrong);
+                }
+
+            });
+        });
+
+
+    //             var answerTwo = $("input[name='son']:checked").val(); //son
+    //                 console.log(answerTwo);
+                
+
+    //             if  (answerTwo === 1 ) {
+    //             numberCorrect++;
+    //             console.log(numberCorrect);
+    //         }
+    //             else {
+    //               numberWrong++;
+    //               console.log(numberWrong);
+    //             }
+
+    //        var answerThree = $("input[name='nicknames']:checked").val(); //nicknames
+    //                 console.log(answerThree);
+                
+
+    //             if  (answerThree === 1 ) {
+    //             numberCorrect++;
+    //             console.log(numberCorrect);
+    //         }
+    //             else {
+    //               numberWrong++;
+    //               console.log(numberWrong);
+    //             } 
+
+    //             var answerFour = $("input[name='key']:checked").val();
+    //                 console.log(answerFour);
+                
+
+    //             if  (answerFour === 1 ) {
+    //             numberCorrect++;
+    //             console.log(numberCorrect);
+    //         }
+    //             else {
+    //               numberWrong++;
+    //               console.log(numberWrong);
+    //             }
+
+    //        var answerFive = $("input[name='gray']:checked").val();
+    //                 console.log(answerFive);
+                
+
+    //             if  (answerFive === 1 ) {
+    //             numberCorrect++;
+    //             console.log(numberCorrect);
+    //         }
+    //             else {
+    //               numberWrong++;
+    //               console.log(numberWrong);
+    //             }
+
+    //         });
 
   
 
-    });
+    // });
 
 
 
