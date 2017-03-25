@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+
 	<title>Trivia Game</title>
 
 	<!-- Latest compiled and minified CSS -->
@@ -23,57 +25,63 @@
 
 
 <div class="container">
-  <div id="bankOne">
 
+<button class="button btn-default btn-lg" type="button" id="startGameButton">Start Game
+</button>
+
+  <div id="questions" style="display: none;">
+    <div id="bankOne">
   	  <h2> Who is Walt's alter ego?</h2> 
 
-<label class="radio-inline"><input type="radio" name="heis">Heisenberg</label>
-<label class="radio-inline"><input type="radio" name="willy">Willy Wonka</label>
-<label class="radio-inline"><input type="radio" name="capt">Captain Crystal</label>
-<label class="radio-inline"><input type="radio" name="doctor">Dr. Feelgood</label>
-</div>
+<label class="radio-inline"><input type="radio" value="1" name="alter">Heisenberg</label>
+<label class="radio-inline"><input type="radio" value="0" name="alter">Willy Wonka</label>
+<label class="radio-inline"><input type="radio" value="0" name="alter">Captain Crystal</label>
+<label class="radio-inline"><input type="radio" value="0" name="alter">Dr. Feelgood</label>
 
+</div>
 <div id="bankTwo">
   	 <h2> What disorder does Walt's son, Walter White, Jr., have?</h2>
  
-<label class="radio-inline"><input type="radio" name="muscDys">Muscular Dystrophy</label>
-<label class="radio-inline"><input type="radio" name="huntDis">Huntington's Disease</label>
-<label class="radio-inline"><input type="radio" name="cerPals">Cerebral Palsy</label>
-<label class="radio-inline"><input type="radio" name="parkDis">Parkinson's Disease</label>
+<label class="radio-inline"><input type="radio" value="0" name="son">Muscular Dystrophy</label>
+<label class="radio-inline"><input type="radio" value="0" name="son">Huntington's Disease</label>
+<label class="radio-inline"><input type="radio" value="1" name="son">Cerebral Palsy</label>
+<label class="radio-inline"><input type="radio" value="0" name="son">Parkinson's Disease</label>
 </div>
+
 
 <div id="bankThree">
-
     <h2> Which of these nicknames is NOT a reference to Walt's methamphetamine product?</h2>
  
-<label class="radio-inline"><input type="radio" name="bigBlue">Big Blue</label>
-<label class="radio-inline"><input type="radio" name="blueSky">Blue Sky</label>
-<label class="radio-inline"><input type="radio" name="fringsBlue">Fring's Blue</label>
-<label class="radio-inline"><input type="radio" name="bluesClue">Blue's Clue</label>
+<label class="radio-inline"><input type="radio" value="0" name="nicknames">Big Blue</label>
+<label class="radio-inline"><input type="radio" value="0" name="nicknames">Blue Sky</label>
+<label class="radio-inline"><input type="radio" value="0" name="nicknames">Fring's Blue</label>
+<label class="radio-inline"><input type="radio" value="1" name="nicknames">Blue's Clue</label>
+
 </div>
 
-<div id="bankFour">
 	<h2> What is the organic compound that is a key ingredient in Walt's meth cooking operation?</h2>
  
-<label class="radio-inline"><input type="radio" name="pseudo">pseudoephedrine</label>
-<label class="radio-inline"><input type="radio" name="methyl">methylamine</label>
-<label class="radio-inline"><input type="radio" name="phenyl">phenylalanine</label>
-<label class="radio-inline"><input type="radio" name="methanol">methanol</label>
+ <div id="bankFour">
+<label class="radio-inline"><input type="radio" value="0" name="key">pseudoephedrine</label>
+<label class="radio-inline"><input type="radio" value="1" name="key">methylamine</label>
+<label class="radio-inline"><input type="radio" value="0" name="key">methanol</label>
+<label class="radio-inline"><input type="radio" value="0" name="key">phenylalanine</label>
 </div>
+
 
 <div id="bankFive">
 <h2> What is the name of the company Walt left before he started teaching?</h2>
  
-<label class="radio-inline"><input type="radio" name="innerTech">InnerTech</label>
-<label class="radio-inline"><input type="radio" name="cerebrus">Cerebrus</label>
-<label class="radio-inline"><input type="radio" name="penetrode">Penetrode</label>
-<label class="radio-inline"><input type="radio" name="grayMatter">Gray Matter</label>
-	</div>
+<label class="radio-inline"><input type="radio" value="0" name="gray">InnerTech</label>
+<label class="radio-inline"><input type="radio" value="0" name="gray">Cerebrus</label>
+<label class="radio-inline"><input type="radio" value="0" name="gray">Penetrode</label>
+<label class="radio-inline"><input type="radio" value="1" name="gray">Gray Matter</label>
+</div>
 <br><br>
 	<input id="submit" class="btn btn-primary" type="submit" value="Submit">
  </div>
 
-
+</div> <!-- close container -->
 
 
 
