@@ -1,6 +1,9 @@
 $(document).ready(function() {
+    var userAnswer;
 
             $("#startGameButton").click(function() {
+                var numberCorrect = 0;
+                var numberWrong = 0;
                 $("#startGameButton").remove();
                 $("#questions").show();
 
@@ -21,59 +24,52 @@ $(document).ready(function() {
                     function(timeleft) { // called every step to update the visible countdown
                         document.getElementById("timer").innerHTML = timeleft + " second(s)";
                     },
-                    function() { // what to do after
+                  // what to do after
+                        function () {
                         $("#timer").replaceWith("<h2>Time is up!<h2>");
-                    });
 
-            });
+
+              
+                
+                    }); 
+
 
  });
 
-var numberCorrect = 0;
-var numberWrong = 0;
-
 //////////CONDITIONALS TO TEST FOR CORRECT AND INCORRECT ANSWERS ONCE TIMER IS DONE OR SUBMIT BUTTON IS HIT
-     $(".input").on("click", function() {
+     //EVENT HANDLER FOR SUBMIT BUTTON/////
+                
+                  $("input[type='submit']").click(function(){
+                    var userAnswer = $("input[name='alter']:checked").val();
+                    console.log(userAnswer);
+                });
 
-    if  $("input[name="alter"]:checked").val(); {
-    numberCorrect++;
-    console.log(numberCorrect);
-}
-    else {
-      numberWrong++;
-    }
+            //     if  (userAnswer === 1 ) {
+            //     numberCorrect++;
+            //     console.log(numberCorrect);
+            // }
+            //     else {
+            //       numberWrong++;
+            //     }
 
-    if  $("input[name="son"]:checked").val(); {
-    numberCorrect++;}
-    else {
-      numberWrong++;
-    }
+            //    var userAnswer = $("input[name='alter']:checked").val();
+            //             console.log(userAnswer);
 
-    if  $("input[name="nicknames"]:checked").val(); {
-    numberCorrect++;}
-    else {
-      numberWrong++;
-    } 
+            //     if  (userAnswer === 1 ) {
+            //     numberCorrect++;
+            //     console.log(numberCorrect);
+            // }
+            //     else {
+            //       numberWrong++;
+            //     }
 
-    if  $("input[name="nicknames"]:checked").val(); {
-    numberCorrect++;}
-    else {
-      numberWrong++;
-    } 
+           
 
-  if  $("input[name="key"]:checked").val(); {
-    numberCorrect++;}
-    else {
-      numberWrong++;
-    }
-
-    if  $("input[name="gray"]:checked").val(); {
-    numberCorrect++;}
-    else {
-      numberWrong++;
-      }
+  
 
     });
+
+
 
 
 
